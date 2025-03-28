@@ -601,3 +601,211 @@ body.rooms-page {
     bottom: 500px;
     right: 250px;
 }
+
+
+/*RESTAURANT PAGE*/
+
+body.restaurant-page {
+    background-color: white !important;
+    background-image: none !important;
+    color: black !important;
+  }
+  
+  .restaurant-page .welcome {
+    text-align: center;
+    padding: 20px 0px;
+    margin: 0 auto;
+    max-width: 800px;
+  }
+  
+  .restaurant-page .welcome .section-title {
+    font-size: 30px;
+    margin-bottom: 10px;
+    margin-left: 0px;
+    position: absolute;
+    display: inline-block;
+  }
+  
+  .restaurant-page .welcome h2 {
+    font-size: 15px;
+    font-weight: 200;
+    color: #444;
+    margin-top: 70px;
+    margin-left: 30px;
+    position: relative;
+    text-align: left;
+  }
+
+
+.right-content .section-title::after {
+    content: "";
+    position: absolute;
+    top: -10px;   
+    left: 0;
+    width: 80px;
+    height: 10px;
+    background-color: #b89d6f;
+}
+
+
+/* Mise en page globale : image gauche + contenu droite */
+.restaurant-layout {
+    display: grid;
+    grid-template-columns: 1.3fr 2fr;
+    gap: 40px;
+    max-width: 1300px;
+    margin: 60px auto;
+    align-items: start;
+    padding: 0 30px;
+}
+
+/* image à gauche */
+.left-image img {
+    width: 500px;
+    height:580px;
+    object-fit: cover;
+    border-radius: 20px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.right-content .welcome {
+    margin-bottom: 30px;
+    position: relative;
+}
+
+.right-content .section-title {
+    font-size: 32px;
+    font-weight: bold;
+    position: relative;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.right-content .section-title::after {
+    content: "";
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 80px;
+    height: 4px;
+    background-color: #b89d6f;
+}
+
+.right-content h2 {
+    font-size: 16px;
+    font-weight: 300;
+    color: #666;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    max-width: 500px;
+}
+
+
+.restaurant-gallery {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.restaurant-gallery .item {
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.restaurant-gallery .item img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+
+.restaurant-gallery .item,
+.left-image {
+    border: 4px solid #b89d6f; 
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.8); 
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.restaurant-gallery .item:hover,
+.left-image:hover {
+    transform: scale(1.05);
+    box-shadow: 0 30px 70px rgba(0, 0, 0, 1); 
+}
+
+.restaurant-gallery .item img,
+.left-image img {
+    object-fit: cover;
+    display: block;
+}
+.restaurant-gallery .item {
+    position: relative;
+  }
+  
+:root {
+    --gold-overlay: rgba(184, 157, 111, 0.85); /* doré transparent */
+  }
+  
+  .info-overlay {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+    z-index: 2;
+  }
+  
+  /* bande dorée en haut */
+  .info-overlay .title-bar {
+    background-color: var(--gold-overlay);
+    color: white;
+    padding: 10px 20px;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    transform: translateY(-100%);
+    transition: transform 0.4s ease;
+  }
+  
+  .info-overlay .text-bar {
+    background-color: var(--gold-overlay);
+    color: white;
+    padding: 15px 20px;
+    font-size: 14px;
+    text-align: center;
+    line-height: 1.4;
+    transform: translateY(100%);
+    transition: transform 0.4s ease;
+  }
+  
+  .restaurant-gallery .item:hover .info-overlay {
+    opacity: 1;
+    pointer-events: auto;
+  }
+  
+  .restaurant-gallery .item:hover .title-bar {
+    transform: translateY(0);
+  }
+  
+  .restaurant-gallery .item:hover .text-bar {
+    transform: translateY(0);
+  }
+
+  /*bouton*/
+
+.btn-home:hover {
+    background: #b89d6f; 
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+}
+
+.restaurant-page .btn-home {
+    position: fixed;
+    bottom: 450px;
+    right: 100px;
+}
+  
