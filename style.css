@@ -484,3 +484,120 @@ body.amenities-page {
     font-size: 20px;
 }
 
+/*ROOMS PAGE*/
+
+
+body.rooms-page {
+    background-color: white !important;
+    background-image: none !important;
+    color: black !important;
+  }
+  
+.rooms-page .rooms-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 1200px;
+    margin: auto;
+    padding-top: 10px;
+  }
+
+/* Texte au-dessus */
+.rooms-page .welcome {
+    text-align: left; 
+    margin-bottom: -60px; 
+    margin-left: 150px;
+    margin-top: -60px;
+}
+
+.rooms-page .welcome h2 { 
+    text-align: left; 
+    font-size: 30px; 
+    margin-left: -220px;
+    margin-top: 40px;
+}
+
+/* Titre */
+.rooms-page .section-title {
+    text-align: left;
+    font-size: 15px;
+    margin-top: 10px;
+
+}
+
+
+/* Images sous le texte */
+.rooms-page .image-container {
+    display: flex; 
+    justify-content: center; 
+    gap: 30px; 
+    flex-wrap: wrap; 
+    margin-top: 0px;
+}
+
+.room-card {
+    width: 280px;
+    border-radius: 15px;
+    overflow: hidden;
+    background: white;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    border: 2px solid #c3a77c;
+    transition: transform 0.3s ease-in-out;
+  }
+
+.room-card img {
+    width: 500px;
+    height: 50px;
+    object-fit: cover;
+  }
+  
+.room-info {
+    padding: 15px;
+    text-align: left;
+  }
+
+/* Titre de la chambre */
+.room-info h3 {
+    font-size: 19.2px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+/* Prix */
+.room-info p {
+    font-size: 1px;
+    color: black;
+}
+
+.room-info strong {
+    font-size: 30px;
+    color: black;
+}
+
+.room-info span {
+    font-size: 20px;
+    color: gray;
+}
+
+.rooms-page .image-container img {
+    border: 3px solid #b89d6f; 
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.7); 
+    width: 280px;
+    height: 380px;
+    object-fit: cover;
+    border-radius: 10px;
+    
+}
+
+/*bouton*/
+
+.btn-home:hover {
+    background: #b89d6f; 
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+}
+
+.rooms-page .btn-home {
+    position: fixed;
+    bottom: 500px;
+    right: 250px;
+}
