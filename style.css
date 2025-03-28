@@ -849,4 +849,89 @@ body.restaurant-page {
     bottom: 450px;
     right: 100px;
 }
+
+/* GALLERY PAGE */
+
+body.gallery-page {
+    background-color: white !important;
+    background-image: none !important;
+    color: black !important;
+  }
+  
+  .gallery-page .welcome {
+    text-align: center;
+    padding: 20px 0px;
+    margin: 0 auto;
+    max-width: 600px;
+  }
+  
+  .gallery-page .welcome .section-title {
+    font-size: 13px;
+    margin-top: 30px;
+    margin-left: -200px;
+    color: #444;
+    position: absolute;
+    display: inline-block;
+  }
+  
+  .gallery-page .welcome h2 {
+    font-size: 30px;
+    font-weight: bold;
+    margin-top: 70px;
+    margin-left: -200px;
+    position: relative;
+    text-align: left;
+  }
+  
+  .right-content .section-title::after {
+    content: "";
+    position: absolute;
+    top: -10px;
+    left: 0;
+    width: 80px;
+    height: 10px;
+    background-color: #b89d6f;
+  }
+  
+  .btn-home:hover {
+    background: #b89d6f;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+  }
+  
+  .gallery-page .btn-home {
+    position: fixed;
+    bottom: 500px;
+    right: 100px;
+  }
+  
+  .gallery-gallery {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 50px 30px;
+  }
+  
+  .gallery-gallery .item {
+    width: 100px;
+    height: 450px;
+    transform: rotateY(15deg);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 20px;
+    overflow: hidden;
+    border: 4px solid #b89d6f;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.6);
+  }
+  
+  .gallery-gallery .item img {
+    width: 110%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+  
+  .gallery-gallery .item:hover {
+    transform: rotateY(3deg) scale(1.05);
+    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.8);
+  }
   
