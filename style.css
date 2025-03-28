@@ -1,0 +1,225 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@200;300;400;500;600;700;800;900&display=swap');
+
+/* Initialement, les tailles étaient en rem, vw et vh pour être adaptatives.
+   Cependant, cela devenait trop complexe à gérer sans framework responsive.
+   J’ai donc converti toutes les tailles en px pour une meilleure maîtrise visuelle
+   et faciliter la gestion manuelle sur les différents écrans. */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: url(images/home1.jpg) no-repeat center center fixed;
+  background-size: cover;
+  color: white;
+  font-family: 'Roboto Slab', serif;
+}
+
+.logo img {
+  height: 35px;
+  margin-left: 96px; 
+  margin-top: 32px;  
+}
+
+nav {
+  position: absolute;
+  top: 43px;    
+  right: 96px;  
+}
+
+ul {
+  display: flex;
+  list-style: none;
+  gap: 58px;  
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: white;
+  font-size: 19px;
+  font-weight: 300;
+  transition: color 0.3s ease-in-out;
+}
+
+nav ul li a:hover {
+  color: #c1b086;
+}
+
+.hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 600px; 
+  padding: 0 192px; 
+}
+
+.hero-content {
+  max-width: 60%;
+  text-align: justify;
+  margin-top: 10px;
+}
+
+.hero h1 {
+  font-size: clamp(48px, 154px, 96px);
+  font-weight: 400;
+  margin-bottom: 108px; 
+}
+
+.hero p {
+  font-size: clamp(16px, 19px, 24px);
+  line-height: 1.5;
+}
+
+.hero::after {
+  content: "H";
+  position: absolute;
+  top: -108px; 
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: clamp(160px, 768px, 640px);
+  font-weight: 800;
+  color: rgba(255, 255, 255, 0.1);
+  z-index: 0;
+  pointer-events: none;
+}
+
+@media screen and (max-width: 1024px) {
+    .nav-bar {
+      flex-direction: column;
+      align-items: center;
+      gap: 24px;
+    }
+  
+    nav ul {
+      flex-direction: column;
+      gap: 16px;
+      padding: 16px;
+    }
+  
+    .hero {
+      height: auto;
+      padding: 86px 96px; 
+      text-align: center;
+    }
+  
+    .hero h1 {
+      font-size: clamp(32px, 96px, 40px);
+    }
+  
+    .hero p {
+      font-size: clamp(14px, 22px, 19px);
+      max-width: 85%;
+    }
+  
+    .hero::after {
+      font-size: clamp(128px, 480px, 288px);
+      top: 108px; 
+    }
+  }
+  
+  
+  /*  pour les petits écrans */
+  @media (max-width: 768px) {
+      .logo img {
+          height: 30px;
+          margin-left: 3vw;
+      }
+  
+      nav {
+          top: 2vh;
+          right: 3vw;
+      }
+  
+      ul {
+          gap: 5vw;
+      }
+  
+      .hero {
+          flex-direction: column;
+          text-align: center;
+      }
+  
+      .hero-content {
+          max-width: 90%;
+          margin: 5vh auto;
+      }
+  
+      .hero h1 {
+          font-size: clamp(2.5rem, 6vw, 4rem);
+      }
+  
+      .hero p {
+          font-size: clamp(0.9rem, 1.8vw, 1.3rem);
+      }
+  
+      .hero::after {
+          font-size: clamp(6rem, 30vw, 25rem);
+      }
+  }
+  
+  /* pour les PC portables (max 1366px) */
+  @media screen and (max-width: 1366px) {
+      .hero h1 {
+          font-size: clamp(2.5rem, 4vw, 3rem); /* Ajustement dynamique */
+          margin-top: -30vh;
+          margin-left: -11vw;
+      }
+  
+      .hero-content {
+          margin-top: 0rem; /* Remonte le titre et le texte */
+      }
+      
+      
+      .hero p {
+          font-size: clamp(0.2rem, 1.5vw, 0.7rem);
+          max-width: 95%;
+          margin-top: 10px;
+          margin-left: -8vw;
+      }
+  
+      .hero::after {
+          font-size: clamp(12rem, 30vw, 22rem); /* Augmente la taille */
+          top: -2%; /* Déplace plus bas */
+          left: 20%; /* Ajuste légèrement la position */
+          max-width: 10%;
+      }
+  }
+  
+  /* 📱 Tablettes et écrans moyens (max 1024px) */
+  @media screen and (max-width: 1024px) {
+      .nav-bar {
+          flex-direction: column;
+          align-items: center;
+          gap: 1.5rem;
+      }
+  
+      nav ul {
+          flex-direction: column;
+          gap: 1rem;
+          padding: 1rem;
+      }
+  
+      .hero {
+          height: auto;
+          padding: 8vh 5%;
+          text-align: center;
+      }
+  
+      .hero h1 {
+          font-size: clamp(2rem, 5vw, 2.5rem);
+      }
+  
+      .hero p {
+          font-size: clamp(0.9rem, 1.5vw, 1.2rem);
+          max-width: 85%;
+      }
+  
+      .hero::after {
+          font-size: clamp(8rem, 25vw, 18rem);
+          top: 10%;
+      }
+  }
